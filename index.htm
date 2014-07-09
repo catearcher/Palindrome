@@ -1,21 +1,19 @@
 <meta charset='utf-8'>
 
 <script>
-function p(s) { // function palindrome(string)
 
-  // initialize a (the adder/substracter); cast s (the input string) to an integer on every turn
-  for (a=0;;s-=0) {
+for (
+  s = prompt() - 0, // read the input and cast it to integer
+  a = 0; // initialize the adder/substracter
 
-    // if the numberstring is a palindrome, return it
-    if (s == (s+"").split("").reverse().join("")) {
-      return s;
-    }
+  // exit condition: the input must be equal to its reverse
+  s != (s + "").split("").reverse().join("");
 
-    // increment the adder/substracter and alternately add it to or substract it from the input (example: if s was 7, then it becomes 6,8,5,9,4,10,...)
-    ++a%2 ? s-=a : s+=a;
-  }
-}
+  // increment the adder/substracter and alternately add it to or substract it from the input (example: if s was 7, then it becomes 6,8,5,9,4,10,...)
+  ++a % 2 ? s -= a : s += a
+);
 
-alert(p(prompt()));
+// output
+alert(s);
 
 </script>
