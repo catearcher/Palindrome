@@ -10,7 +10,7 @@ for (
   s != (s + "").split("").reverse().join("");
 
   // increment the adder/substracter and alternately add it to or substract it from the input (example: if s was 7, then it becomes 6,8,5,9,4,10,...)
-  ++a % 2 ? s -= a : s += a
+  s += a++ % 2 ? -a : a
 );
 
 // output
