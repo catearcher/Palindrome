@@ -1,12 +1,17 @@
 <meta charset='utf-8'>
 
 <script>
-function p(s) {
+function p(s) { // function palindrome(string)
+
+  // initialize a (the adder/substracter); cast s (the input string) to an integer on every turn
   for (a=0;;s-=0) {
+
+    // if the numberstring is a palindrome, return it
     if (s == (s+"").split("").reverse().join("")) {
       return s;
     }
 
+    // increment the adder/substracter and alternately add it to or substract it from the input (example: if s was 7, then it becomes 6,8,5,9,4,10,...)
     ++a%2 ? s-=a : s+=a;
   }
 }
