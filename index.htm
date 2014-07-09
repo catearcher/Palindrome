@@ -1,0 +1,17 @@
+<meta charset='utf-8'>
+
+<script>
+function p(s) {
+  for (a=1;;s-=0) {
+    if (s == (s+"").split("").reverse().join("")) {
+      return s;
+    }
+
+    a%2 ? s-=a : s+=a;
+    a++;
+  }
+}
+
+alert(p(prompt()));
+
+</script>
